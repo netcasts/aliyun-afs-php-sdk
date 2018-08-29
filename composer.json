@@ -1,9 +1,9 @@
 {
-    "name": "timerlau/aliyun-afs-php",
+    "name": "timerlau/aliyun-afs-php-sdk",
     "type": "package",
     "description": "阿里AFS人机校验服务SDK For PHP",
     "keywords": ["阿里AFS服务SDK", "阿里人机校验服务SDK", "aliyun afs php sdk"],
-    "homepage": "https://github.com/timerlau/aliyun-afs-php.git",
+    "homepage": "https://github.com/timerlau/aliyun-afs-php-sdk.git",
     "license": "MIT",
     "authors": [
         {
