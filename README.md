@@ -24,13 +24,13 @@ composer require timerlau/aliyun-afs-php-sdk
             "type": "composer",
             "url": "https://packagist.phpcomposer.com"
         },
-        "timerlau": {
+        "timerlau/aliyun-afs-php-sdk": {
             "type": "git",
-            "url": "https://github.com/timerlau/aliyun-afs-php.git"
+            "url": "https://github.com/timerlau/aliyun-afs-php-sdk.git"
         }
     },
     "require": {
-        "timerlau/aliyun-afs-php": "^1.0"
+        "timerlau/aliyun-afs-php-sdk": "^1.0"
     }
 }
 ```
