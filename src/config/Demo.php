@@ -47,7 +47,7 @@ class Demo extends Base implements ConfigInterface {
     public function frontend()
     {
         $html =<<<HTML
-<div id="aliyun_captcha" style="margin: 10px 0 10px 120px;"></div>
+<div id="aliyun_captcha"></div>
 <input type="hidden" name="{$this->selector_nvc_name}" class="{$this->selector_nvc_class}">
 <script>
 
