@@ -47,7 +47,7 @@ class Demo extends Base implements ConfigInterface {
     public function frontend()
     {
         $html =<<<HTML
-<div id="aliyun_captcha"></div>
+<div id="aliyun_captcha" style="margin: 10px 0 10px 120px;"></div>
 <input type="hidden" name="{$this->selector_nvc_name}" class="{$this->selector_nvc_class}">
 <script>
 
@@ -73,8 +73,12 @@ class Demo extends Base implements ConfigInterface {
             var submit_function = form.attributes["onsubmit"].value
 
             if (submit_function.indexOf('return fastpostvalidate') > -1) {
-                document.querySelector('.{$this->selector_button_class}').onclick=function() {
-                    event.preventDefault();
+                document.querySelector('.{$this->selector_button_class}').onclick=function(event) {
+                    if (document.all) {
+                        window.event.returnValue = false;
+                    } else {
+                        event.preventDefault();
+                    }
                     if (fastpostvalidate(form, 1)){
                         form.submit()
                     }
@@ -180,7 +184,7 @@ class Demo extends Base implements ConfigInterface {
  */
 var doc = document
 jQuery(function(){
-    doc.querySelector('.{$this->selector_button_class}').onclick = function() {
+    doc.querySelector('.{$this->selector_button_class}').onclick = function(event) {
         // 防止多次提交校验，导致nvc失效
         // 第一次验证，可以走 yourRegisterRequest 
         if (doc.querySelector('.{$this->selector_nvc_class}').value == '') {
@@ -196,7 +200,11 @@ jQuery(function(){
             // 第一次验证，走该方法
             yourRegisterRequest('{$this->request_api}', params)
             // 任何点击后的事件，需放到 yourRegisterRequest 的回调函数中处理
-            event.preventDefault();
+            if (document.all) {
+                window.event.returnValue = false;
+            } else {
+                event.preventDefault();
+            }
 
         // 已经第一次验证过的话，就不再进行上面的验证，而是直接将 nvc 提交到服务端进行验证
         // 否则，nvc 会因为校验次数过多，导致认证失效
