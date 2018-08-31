@@ -9,7 +9,7 @@
 namespace Timerlau\AliyunAfs\Config;
 use afs\Request\V20180112\AnalyzeNvcRequest;
 
-class Demo extends Base implements ConfigInterface {
+class Dz extends Base implements ConfigInterface {
 
     public function __construct($config = [])
     {
