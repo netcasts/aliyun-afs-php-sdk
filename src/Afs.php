@@ -6,8 +6,9 @@
  * @since   2018.08.22
  */
 namespace Timerlau\AliyunAfs;
+include_once 'lib/aliyun-php-sdk-afs/aliyun-php-sdk-core/Config.php';
+
 use Timerlau\AliyunAfs\Config\ConfigInterface;
-use afs\Core\Config;
 
 class Afs
 {
@@ -17,9 +18,6 @@ class Afs
 
     public function __construct($class_name, $config = [])
     {
-        // 加载afs配置信息
-        Config::autoloader();
-
         $this->className = self::filter($class_name);
         $this->config = $config;
 

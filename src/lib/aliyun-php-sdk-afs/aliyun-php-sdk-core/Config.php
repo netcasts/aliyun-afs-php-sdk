@@ -17,7 +17,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace afs\Core;
+//namespace afs\Core;
 include_once 'Autoloader/Autoloader.php';
 include_once 'Regions/EndpointConfig.php';
 include_once 'Regions/LocationService.php';
@@ -44,8 +44,9 @@ Autoloader::addAutoloadPath("aliyun-php-sdk-slb");
 Autoloader::addAutoloadPath("aliyun-php-sdk-cms");
 Autoloader::addAutoloadPath("aliyun-php-sdk-idst");
 */
-//Autoloader::addAutoloadPath("aliyun-php-sdk-afs");
+Autoloader::addAutoloadPath("aliyun-php-sdk-afs");
 
+/*
 class Config {
 
     public static function autoloader()
@@ -53,6 +54,7 @@ class Config {
         \Autoloader::addAutoloadPath("aliyun-php-sdk-afs");
     }
 }
+*/
 
 //config http proxy
 define('ENABLE_HTTP_PROXY', false);
