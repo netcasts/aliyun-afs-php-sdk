@@ -17,9 +17,9 @@
     "autoload": {
         "psr-4": {
             "afs\\Request\\V20180112\\": "src/lib/aliyun-php-sdk-afs/aliyun-php-sdk-afs/",
+            "afs\\Core\\": "src/lib/aliyun-php-sdk-afs/aliyun-php-sdk-core/",
             "Timerlau\\AliyunAfs\\Config\\": "src/config/",
             "Timerlau\\AliyunAfs\\": "src/"
-        },
-        "files": ["src/lib/aliyun-php-sdk-afs/aliyun-php-sdk-core/Config.php"]
+        }
     }
 }
